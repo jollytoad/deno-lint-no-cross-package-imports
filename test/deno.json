@@ -1,0 +1,14 @@
+{
+  "workspace": [
+    "./package-1",
+    "./package-2"
+  ],
+  "lint": {
+    "plugins": [
+      "jsr:@jollytoad/lint-no-cross-package-imports"
+    ]
+  },
+  "imports": {
+    "jsr:@jollytoad/lint-no-cross-package-imports": "../mod.ts"
+  }
+}

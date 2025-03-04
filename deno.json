@@ -1,0 +1,16 @@
+{
+  "name": "@jollytoad/lint-no-cross-package-imports",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "tasks": {
+    "ok": "deno fmt && deno lint && deno check mod.ts && deno publish --dry-run --allow-dirty",
+    "demo": "cd test; deno lint"
+  },
+  "publish": {
+    "exclude": [
+      ".github",
+      "test"
+    ]
+  }
+}

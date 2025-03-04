@@ -4,7 +4,7 @@ This lint plugin prevents relative imports from descending beyond the root of
 the package.
 
 The root of the package is currently deemed to be the nearest ancestor directory
-containing a `deno.json` file.
+containing a `deno.json`/`deno.jsonc`/`package.json` file.
 
 So if a relative import within the package descends beyond this and outside of
 the deemed current package then the problem is reported.

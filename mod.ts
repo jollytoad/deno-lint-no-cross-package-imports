@@ -35,7 +35,11 @@ export default plugin;
 function findRoot(filename: string): string | undefined {
   const dir = dirname(filename);
   if (dir === filename) return undefined;
-  if (existsSync(resolve(dir, "deno.json"))) {
+  if (
+    existsSync(resolve(dir, "deno.json")) ||
+    existsSync(resolve(dir, "deno.jsonc")) ||
+    existsSync(resolve(dir, "package.json"))
+  ) {
     return dir;
   } else {
     return findRoot(dir);

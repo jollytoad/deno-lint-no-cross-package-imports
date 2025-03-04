@@ -18,7 +18,7 @@ So given the file structure:
 and `foo/stuff.ts` has:
 
 ```ts
-import * from "../util.ts";
+import * as util from "../bar/util.ts";
 ```
 
 then the lint rule will report the problem.
